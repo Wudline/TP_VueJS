@@ -91,22 +91,14 @@ function SpellDescription () {
 /* Description  index: 12 */
 /* Item needed  index: 13 */
 
-
-function SpellFullDesc(index)
-{
-  txt="<b>Livre :</b> ";
-  txt+=sortTable[index][0]+"<br><b>Ecole :</b> ";
-  txt+=sortTable[index][2]+"<br><b>Branches :</b> ";
-  txt+=sortTable[index][3].toString()+"<br><b>Classes :</b> ";
-  txt+=sortTable[index][4].toString()+"<br><b>Composantes :</b> ";
-  txt+=sortTable[index][5].toString()+"<br><b>Temps d'incantation :</b> ";
-  txt+=sortTable[index][6]+"<br><b>Portée :</b> ";
-  txt+=sortTable[index][7]+"<br><b>Cible :</b> ";
-  txt+=sortTable[index][8]+"<br><b>Durée :</b> ";
-  txt+=sortTable[index][9]+"<br><b>Jet de sauvegarde :</b> ";
-  txt+=sortTable[index][10]+"<br><b>Résistance à la magie :</b> ";
-  txt+=sortTable[index][11]+"<br><b>Description : </b>";
-  txt+=sortTable[index][12]+"<br><b>Nécessaire :</b> ";
-  txt+=sortTable[index][13];
+function SpellFullDesc (spellName) {
+  let index = 0
+  let txt = []
+  while (spellName !== sortTable[index][1] && index !== sortTable.length) {
+    index += 1
+  }
+  if (spellName === sortTable[index][1] && index !== sortTable.length) {
+    txt = ['Livre', sortTable[index][0], 'Ecole', sortTable[index][2], 'Branches', sortTable[index][3].toString(), 'Classes', sortTable[index][4].toString(), 'Composantes', sortTable[index][5].toString(), 'Temps incantation', sortTable[index][6], 'Portée', sortTable[index][7], 'Cible', sortTable[index][8], 'Durée', sortTable[index][9], 'Jet de sauvegarde', sortTable[index][10], 'Résistance à la magie', sortTable[index][11], 'Description ', sortTable[index][12], 'Nécessaire', sortTable[index][13]]
+  }
   return txt
 }

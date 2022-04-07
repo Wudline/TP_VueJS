@@ -1,5 +1,5 @@
 <template>
-  <h3 @click="$emit('desc-state-changed', $event.target.onclick)" id="spellName">{{ spellName }}</h3>
+  <h3 v-on:click="$emit('desc-state-changed', $event.target.click)" id="spellName">{{ spellName }}</h3>
 </template>
 
 <script>

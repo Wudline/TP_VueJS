@@ -1,9 +1,8 @@
-/* eslint-disable */
 import Vue from 'vue'
 import Router from 'vue-router'
-import Stat from '@/components/Stat'
-import Config from '@/components/Config'
-import Recherche from '@/components/Recherche'
+import Configuration from '../components/Configuration'
+import Recherche from '../components/Recherche'
+import Statistiques from '../components/Statistiques'
 
 Vue.use(Router)
 
@@ -11,18 +10,18 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Config',
-      component: Config
-    },
-    {
-      path: '/Stat',
-      name: 'Stat',
-      component: Stat
+      name: 'Configuration',
+      component: Configuration
     },
     {
       path: '/Recherche',
       name: 'Recherche',
       component: Recherche
+    },
+    {
+      path: '/Statistiques',
+      name: 'Statistiques',
+      component: Statistiques
     }
   ]
 })

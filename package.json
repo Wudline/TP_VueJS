@@ -1,8 +1,8 @@
 {
-  "name": "imr_2021",
+  "name": "dungeon_and_dragon",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "Namor Esther <38126106+NamorEsther@users.noreply.github.com>",
+  "author": "Louis Legrand <louislegrand42@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",

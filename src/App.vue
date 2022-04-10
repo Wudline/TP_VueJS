@@ -1,19 +1,15 @@
 <template>
   <div id="app">
-    <router-view />
-    <Recherche/>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import Config from './components/Config'
-import Recherche from './components/Recherche'
-
 export default {
-  name: 'App',
-  components: {
-    Recherche,
-    Config
-  }
+  name: 'App'
 }
 </script>
+
+<style>
+
+</style>

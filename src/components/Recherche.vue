@@ -1,5 +1,7 @@
 <template>
   <div id="Recherche">
+    <router-link to="/">Configuration</router-link>
+    <router-link to="/Statistiques">Statistiques</router-link>
     <p>Recherche</p>
     <input type="text" v-model="search" placeholder="Spell name">
     <ul>

@@ -1,5 +1,5 @@
 import {sortTable} from './data.min.js'
-export {SpellName, SpellBookTitle, SpellClass, SpellBranches, SpellSchool, SpellLevel, SpellDescription, SpellFullDesc}
+export {SpellName, SpellBookTitle, SpellClass, SpellBranches, SpellSchool, SpellLevel}
 
 function SpellBookTitle () {
   const set = new Set()
@@ -64,18 +64,6 @@ function SpellLevel () {
   return Array.from(set).sort()
 }
 
-function SpellDescription () {
-  const set = new Set()
-  const finTable = sortTable.length
-  for (let i = 0; i < finTable; i++) {
-    const finSousTab = sortTable[i][4].length
-    for (let j = 0; j < finSousTab; j++) {
-      set.add(sortTable[i][12])
-    }
-  }
-  return Array.from(set).sort()
-}
-
 /* Book         index: 0  */
 /* Spell name   index: 1  */
 /* School       index: 2  */
@@ -90,15 +78,3 @@ function SpellDescription () {
 /* Magic resist index: 11 */
 /* Description  index: 12 */
 /* Item needed  index: 13 */
-
-function SpellFullDesc (spellName) {
-  let index = 0
-  let txt = []
-  while (spellName !== sortTable[index][1] && index !== sortTable.length) {
-    index += 1
-  }
-  if (spellName === sortTable[index][1] && index !== sortTable.length) {
-    txt = ['Livre', sortTable[index][0], 'Ecole', sortTable[index][2], 'Branches', sortTable[index][3].toString(), 'Classes', sortTable[index][4].toString(), 'Composantes', sortTable[index][5].toString(), 'Temps incantation', sortTable[index][6], 'Portée', sortTable[index][7], 'Cible', sortTable[index][8], 'Durée', sortTable[index][9], 'Jet de sauvegarde', sortTable[index][10], 'Résistance à la magie', sortTable[index][11], 'Description ', sortTable[index][12], 'Nécessaire', sortTable[index][13]]
-  }
-  return txt
-}
